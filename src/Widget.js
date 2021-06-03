@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { constants } from "./constants";
 
-export default function Widget({ children, height, width }) {
+export default function Widget({ children, height, width, double }) {
   const [backgroundColor, setBackgroundColor] = useState(
     pickRandomMediumColor()
   );
@@ -10,7 +10,7 @@ export default function Widget({ children, height, width }) {
     const tileSize = 100;
     const scale =
       Number.isInteger(value) && value > 0 ? (value > 4 ? 4 : value) : 1;
-    return scale * tileSize;
+    return scale * tileSize - (double ? 16 : 0);
   }
 
   function pickRandomMediumColor() {

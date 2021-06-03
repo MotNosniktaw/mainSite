@@ -45,7 +45,12 @@ function App() {
               <Projects />
             </Widget>
           </div>{" "}
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
             <Widget height={2} width={1}>
               <div
                 style={{
@@ -93,7 +98,7 @@ function App() {
                 flexWrap: "wrap",
               }}
             >
-              <Widget height={1} width={1}>
+              <Widget height={1} width={1} double>
                 <div
                   style={{
                     height: "100%",
@@ -114,7 +119,7 @@ function App() {
                   />
                 </div>
               </Widget>
-              <Widget height={1} width={1}>
+              <Widget height={1} width={1} double>
                 <div
                   style={{
                     height: "100%",
@@ -135,7 +140,7 @@ function App() {
                   />
                 </div>
               </Widget>
-              <Widget height={1} width={1}>
+              <Widget height={1} width={1} double>
                 <div
                   style={{
                     height: "100%",
@@ -156,7 +161,7 @@ function App() {
                   />
                 </div>
               </Widget>
-              <Widget height={1} width={1}>
+              <Widget height={1} width={1} double>
                 <div
                   style={{
                     height: "100%",
