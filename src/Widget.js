@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { constants } from "./constants";
 
 export default function Widget({ children, height, width }) {
-  const [backgroundColor, setBackgroundColor] = useState(pickRandomMediumColor());
+  const [backgroundColor, setBackgroundColor] = useState(
+    pickRandomMediumColor()
+  );
   // console.log({ backgroundColor });
   function calculateDimension(value) {
-    const tileSize = 150;
-    const scale = Number.isInteger(value) && value > 0 ? (value > 2 ? 2 : value) : 1;
+    const tileSize = 200;
+    const scale =
+      Number.isInteger(value) && value > 0 ? (value > 2 ? 2 : value) : 1;
     return scale * tileSize;
   }
 
@@ -27,8 +30,11 @@ export default function Widget({ children, height, width }) {
         height: `${calculateDimension(height)}px`,
         flex: width,
         backgroundColor: backgroundColor,
+        boxShadow: "10px 15px 10px rgba(100, 100, 200, 0.3)",
       }}
-    ></div>
+    >
+      {children}
+    </div>
   );
 }
 
