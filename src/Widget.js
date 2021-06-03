@@ -7,9 +7,9 @@ export default function Widget({ children, height, width }) {
   );
   // console.log({ backgroundColor });
   function calculateDimension(value) {
-    const tileSize = 200;
+    const tileSize = 100;
     const scale =
-      Number.isInteger(value) && value > 0 ? (value > 2 ? 2 : value) : 1;
+      Number.isInteger(value) && value > 0 ? (value > 4 ? 4 : value) : 1;
     return scale * tileSize;
   }
 
