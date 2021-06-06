@@ -7,15 +7,16 @@ export default function ResponsivenessWarning({
   showWarning,
 }) {
   return (
-    <div
-      style={{
-        position: "absolute",
-        width: "100%",
-        height: "100%",
-        zIndex: 3,
-      }}
-    >
-      {!dismissed && showWarning && (
+    !dismissed &&
+    showWarning && (
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          zIndex: 3,
+        }}
+      >
         <div
           style={{
             height: "100vh",
@@ -46,7 +47,7 @@ export default function ResponsivenessWarning({
             <button onClick={() => setDismissed(true)}>Dismiss</button>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    )
   );
 }
