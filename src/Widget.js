@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Styl } from "react";
 import constants from "./constants";
 
 export default function Widget({ children, height, width, double, onClick }) {
@@ -24,13 +24,11 @@ export default function Widget({ children, height, width, double, onClick }) {
   return (
     <div
       style={{
-        borderRadius: 16,
-        margin: 16,
         height: `${calculateDimension(height)}px`,
-        flex: width,
         backgroundColor: backgroundColor,
-        boxShadow: "10px 15px 10px rgba(100, 100, 200, 0.3)",
+        flex: width,
       }}
+      className={"widget-base" + (onClick != null ? " clickable" : "")}
       onClick={onClick}
     >
       {children}

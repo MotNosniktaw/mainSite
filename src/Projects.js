@@ -63,18 +63,16 @@ export default function Projects() {
       >
         <div
           style={{
-            borderRadius: 16,
-            margin: 16,
             height: 120,
             width: 120,
             backgroundColor: constants.palette.light,
-            boxShadow: "10px 15px 10px rgba(100, 100, 200, 0.3)",
             padding: 16,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
           }}
+          className={["widget-base clickable"]}
         >
           <img
             style={{ transform: "rotate(180deg)" }}
@@ -198,18 +196,16 @@ export default function Projects() {
       >
         <div
           style={{
-            borderRadius: 16,
-            margin: 16,
             height: 120,
             width: 120,
             backgroundColor: constants.palette.light,
-            boxShadow: "10px 15px 10px rgba(100, 100, 200, 0.3)",
             padding: 16,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
           }}
+          className={["widget-base clickable"]}
         >
           <img src={RightArrow} height={50} />
         </div>

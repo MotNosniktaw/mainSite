@@ -68,3 +68,18 @@
   transition: 0.6s;
   background-color: #cccccc;
 }
+
+.widget-base {
+  border-radius: 16px;
+  margin: 16px;
+  box-shadow: 10px 15px 10px rgba(100, 100, 200, 0.3);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  box-shadow: 10px 15px 10px rgba(100, 100, 200, 0.6);
+  transition: 0.1s;
+}

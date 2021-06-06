@@ -94,11 +94,11 @@ function App() {
         >
           <Particles params={particlesConfig} height="100vh" width={"100%"} />
         </div>
-        <ResponsivenessWarning
+        {/* <ResponsivenessWarning
           dismissed={dismissed}
           setDismissed={setDismissed}
           showWarning={responsivenessWarning}
-        />
+        /> */}
       </div>
     </div>
   );
