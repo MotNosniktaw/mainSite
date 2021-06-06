@@ -56,7 +56,9 @@ export default function Projects() {
       <Segment
         flex={1}
         onClick={() =>
-          projectIndex > 0 ? setProjectIndex(projectIndex - 1) : null
+          projectIndex > 0
+            ? setProjectIndex(projectIndex - 1)
+            : setProjectIndex(projects.length - 1)
         }
       >
         <div
@@ -191,7 +193,7 @@ export default function Projects() {
         onClick={() =>
           projectIndex < projects.length - 1
             ? setProjectIndex(projectIndex + 1)
-            : null
+            : setProjectIndex(0)
         }
       >
         <div
