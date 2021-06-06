@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import { constants } from "./constants";
+import constants from "./constants";
 import Projects from "./Projects";
 import Widget from "./Widget";
-import WidgetContainer from "./WidgetContainer";
-import RLLogo from "./assets/rl-logo.png";
-import DotaLogo from "./assets/dota-logo.png";
-import GHLogo from "./assets/github-logo.png";
-import GmailLogo from "./assets/gmail-logo.png";
-import GiovanniLogo from "./assets/giovanni-logo.webp";
-import LinkedInLogo from "./assets/linkedin-logo.png";
 import Particles from "react-particles-js";
 import particlesConfig from "./assets/particles.json";
 import Personal from "./Personal";
 import Skills from "./Skills";
+import Links from "./Links";
+import ResponsivenessWarning from "./ResponsivenessWarning";
 
 function App() {
+  const [dismissed, setDismissed] = useState(false);
+  const [responsivenessWarning, setResponsivenessWarning] = useState(false);
+
+  useEffect(() => {
+    const onResize = (e) => {
+      if (e.target.innerWidth < 1000) {
+        setResponsivenessWarning(true);
+      }
+    };
+    onResize({ target: { innerWidth: window.innerWidth } });
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   return (
     <div
       style={{
@@ -55,207 +64,22 @@ function App() {
               justifyContent: "center",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                // flexDirection: window.innerWidth < 900 ? "column" : "row",
-              }}
-            >
+            <Row>
               <Widget height={3} width={4}>
                 <Personal />
               </Widget>
               <Widget height={3} width={2}>
                 <Skills />
               </Widget>
-            </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            </Row>
+            <Row>
               <Widget height={4} width={1}>
                 <Projects />
               </Widget>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <Widget
-                height={2}
-                width={1}
-                onClick={() =>
-                  window.open(
-                    "https://rocketleague.tracker.network/rocket-league/profile/steam/76561197997910940/overview"
-                  )
-                }
-              >
-                <div
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    overflow: "hidden",
-                    borderRadius: "16px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <img
-                    src={RLLogo}
-                    style={{
-                      transform: "rotate(-15deg)",
-                      maxHeight: "75%",
-                      top: "10px",
-                      position: "relative",
-                    }}
-                  />
-                </div>
-              </Widget>
-              <Widget
-                height={2}
-                width={1}
-                onClick={() =>
-                  window.open("https://liquipedia.net/dota2/Main_Page")
-                }
-              >
-                <div
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    overflow: "hidden",
-                    borderRadius: "16px",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <img
-                    src={DotaLogo}
-                    style={{
-                      transform: "rotate(10deg)",
-                      height: "105%",
-                    }}
-                  />
-                </div>
-              </Widget>
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                }}
-              >
-                <Widget
-                  height={1}
-                  width={1}
-                  double
-                  onClick={() => window.open("https://github.com/motnosniktaw")}
-                >
-                  <div
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      overflow: "hidden",
-                      borderRadius: "16px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={GHLogo}
-                      style={{
-                        transform: "rotate(-5deg)",
-                        height: "100%",
-                      }}
-                    />
-                  </div>
-                </Widget>
-                <Widget
-                  height={1}
-                  width={1}
-                  double
-                  onClick={() =>
-                    window.open("mailto:tomwatkinsondeveloper@gmail.com")
-                  }
-                >
-                  <div
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      overflow: "hidden",
-                      borderRadius: "16px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={GmailLogo}
-                      style={{
-                        transform: "rotate(15deg)",
-                        height: "100%",
-                      }}
-                    />
-                  </div>
-                </Widget>
-                <Widget
-                  height={1}
-                  width={1}
-                  double
-                  onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/in/tom-watkinson-73938073/"
-                    )
-                  }
-                >
-                  <div
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      overflow: "hidden",
-                      borderRadius: "16px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={LinkedInLogo}
-                      style={{
-                        transform: "rotate(5deg)",
-                        height: "100%",
-                      }}
-                    />
-                  </div>
-                </Widget>
-                <Widget
-                  height={1}
-                  width={1}
-                  double
-                  onClick={() => window.open("Https://giovannilimmigrato.com")}
-                >
-                  <div
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      overflow: "hidden",
-                      borderRadius: "16px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={GiovanniLogo}
-                      style={{
-                        transform: "rotate(-15deg)",
-                        height: "100%",
-                      }}
-                    />
-                  </div>
-                </Widget>
-              </div>
-            </div>
+            </Row>
+            <Row>
+              <Links />
+            </Row>
           </div>
         </div>
         <div
@@ -268,8 +92,19 @@ function App() {
         >
           <Particles params={particlesConfig} height="100vh" width={"100%"} />
         </div>
+        <ResponsivenessWarning
+          dismissed={dismissed}
+          setDismissed={setDismissed}
+          showWarning={responsivenessWarning}
+        />
       </div>
     </div>
+  );
+}
+
+function Row({ children }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "row" }}>{children}</div>
   );
 }
 

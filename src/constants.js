@@ -1,4 +1,4 @@
-export const constants = {
+const constants = {
   palette: {
     light: "#f7f4ea",
     medium1: "#ded9e2",
@@ -7,3 +7,5 @@ export const constants = {
     dark: "#c0b9dd",
   },
 };
+
+export default constants;

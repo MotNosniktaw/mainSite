@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { constants } from "./constants";
+import React, { useState } from "react";
+import constants from "./constants";
 
 export default function Widget({ children, height, width, double, onClick }) {
   const [backgroundColor, setBackgroundColor] = useState(
     pickRandomMediumColor()
   );
-  // console.log({ backgroundColor });
   function calculateDimension(value) {
     const tileSize = 100;
     const scale =

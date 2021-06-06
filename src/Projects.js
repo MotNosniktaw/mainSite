@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { constants } from "./constants";
+import constants from "./constants";
 import GvantaLogo from "./assets/gvanta-logo.png";
 import RagnarokLogo from "./assets/ragnarok-logo.png";
 import RoqqettLogo from "./assets/roqqett-logo.jpg";
