@@ -10,18 +10,18 @@ export default function Projects() {
   const [projectIndex, setProjectIndex] = useState(0);
   const projects = [
     {
-      title: "Grandeo",
-      description:
-        "Grandeo is a file storage and sharing platform implementing the power of the blockchain to maintain data integrity.",
-      image: GvantaLogo,
-      links: ["https://grandeo.net"],
-    },
-    {
       title: "Roqqett",
       description:
         "Mobile and Web application that uses the power of open banking and faster payments to create a one-stop-shop for all of your payments.",
       image: RoqqettLogo,
       links: ["https://roqqett.com"],
+    },
+    {
+      title: "Grandeo",
+      description:
+        "Grandeo is a file storage and sharing platform implementing the power of the blockchain to maintain data integrity.",
+      image: GvantaLogo,
+      links: ["https://grandeo.net"],
     },
     {
       title: "Ragnarok",
