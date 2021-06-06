@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { constants } from "./constants";
 
-export default function Widget({ children, height, width, double }) {
+export default function Widget({ children, height, width, double, onClick }) {
   const [backgroundColor, setBackgroundColor] = useState(
     pickRandomMediumColor()
   );
@@ -32,6 +32,7 @@ export default function Widget({ children, height, width, double }) {
         backgroundColor: backgroundColor,
         boxShadow: "10px 15px 10px rgba(100, 100, 200, 0.3)",
       }}
+      onClick={onClick}
     >
       {children}
     </div>

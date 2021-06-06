@@ -13,6 +13,7 @@ import LinkedInLogo from "./assets/linkedin-logo.png";
 import Particles from "react-particles-js";
 import particlesConfig from "./assets/particles.json";
 import Personal from "./Personal";
+import Skills from "./Skills";
 
 function App() {
   return (
@@ -54,11 +55,19 @@ function App() {
               justifyContent: "center",
             }}
           >
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                // flexDirection: window.innerWidth < 900 ? "column" : "row",
+              }}
+            >
               <Widget height={3} width={4}>
                 <Personal />
               </Widget>
-              <Widget height={3} width={2} />
+              <Widget height={3} width={2}>
+                <Skills />
+              </Widget>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <Widget height={4} width={1}>
@@ -71,7 +80,15 @@ function App() {
                 flexDirection: "row",
               }}
             >
-              <Widget height={2} width={1}>
+              <Widget
+                height={2}
+                width={1}
+                onClick={() =>
+                  window.open(
+                    "https://rocketleague.tracker.network/rocket-league/profile/steam/76561197997910940/overview"
+                  )
+                }
+              >
                 <div
                   style={{
                     height: "100%",
@@ -94,7 +111,13 @@ function App() {
                   />
                 </div>
               </Widget>
-              <Widget height={2} width={1}>
+              <Widget
+                height={2}
+                width={1}
+                onClick={() =>
+                  window.open("https://liquipedia.net/dota2/Main_Page")
+                }
+              >
                 <div
                   style={{
                     height: "100%",
@@ -121,7 +144,12 @@ function App() {
                   flexWrap: "wrap",
                 }}
               >
-                <Widget height={1} width={1} double>
+                <Widget
+                  height={1}
+                  width={1}
+                  double
+                  onClick={() => window.open("https://github.com/motnosniktaw")}
+                >
                   <div
                     style={{
                       height: "100%",
@@ -142,7 +170,14 @@ function App() {
                     />
                   </div>
                 </Widget>
-                <Widget height={1} width={1} double>
+                <Widget
+                  height={1}
+                  width={1}
+                  double
+                  onClick={() =>
+                    window.open("mailto:tomwatkinsondeveloper@gmail.com")
+                  }
+                >
                   <div
                     style={{
                       height: "100%",
@@ -163,7 +198,16 @@ function App() {
                     />
                   </div>
                 </Widget>
-                <Widget height={1} width={1} double>
+                <Widget
+                  height={1}
+                  width={1}
+                  double
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/tom-watkinson-73938073/"
+                    )
+                  }
+                >
                   <div
                     style={{
                       height: "100%",
@@ -184,7 +228,12 @@ function App() {
                     />
                   </div>
                 </Widget>
-                <Widget height={1} width={1} double>
+                <Widget
+                  height={1}
+                  width={1}
+                  double
+                  onClick={() => window.open("Https://giovannilimmigrato.com")}
+                >
                   <div
                     style={{
                       height: "100%",

@@ -10,11 +10,21 @@ export default function Personal() {
         fontWeight: 600,
         color: "#444455",
         padding: 16,
+        textAlign: "center",
       }}
     >
       <h1 style={{ lineHeight: 0.5 }}>Tom Watkinson</h1>
-      <p>Full Stack Web Developer</p>
-      Bingity Bong. I am human, I am developer, I am ....... Tom
+      <p>
+        <i>Full Stack Web Developer - Bath, UK</i>
+      </p>
+      <p style={{ fontSize: 18 }}>
+        After a strong education in Science and Research, I found a new passion
+        in software development. Here is a quick overview of my skills, past
+        work and links to the other fancies in my life.
+      </p>
+      <p style={{ fontSize: 18 }}>
+        Feel free to contact me using the links below :)
+      </p>
     </div>
   );
 }

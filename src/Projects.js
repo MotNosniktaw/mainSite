@@ -1,24 +1,44 @@
 import React, { useState } from "react";
 import { constants } from "./constants";
 import GvantaLogo from "./assets/gvanta-logo.png";
+import RagnarokLogo from "./assets/ragnarok-logo.png";
 import RoqqettLogo from "./assets/roqqett-logo.jpg";
+import UnderConstruction from "./assets/under-construction.png";
 import RightArrow from "./assets/right-arrow.svg";
 
 export default function Projects() {
   const [projectIndex, setProjectIndex] = useState(0);
   const projects = [
     {
-      title: "Gvanta (Grandeo)",
-      description: "API into the blockchain",
+      title: "Grandeo",
+      description:
+        "Grandeo is a file storage and sharing platform implementing the power of the blockchain to maintain data integrity.",
       image: GvantaLogo,
+      links: ["https://grandeo.net"],
     },
     {
       title: "Roqqett",
-      description: "Faster payments...faster!!!!",
+      description:
+        "Mobile and Web application that uses the power of open banking and faster payments to create a one-stop-shop for all of your payments.",
       image: RoqqettLogo,
+      links: ["https://roqqett.com"],
     },
-    { title: "Fing", description: "Bong", image: "yes" },
-    { title: "Ging", description: "Bong", image: "yes" },
+    {
+      title: "Ragnarok",
+      description:
+        "A very young personal project aiming to build an audit and launchpad platform to ensure safety when trading altcoins on the cryptocurrency market.",
+      image: RagnarokLogo,
+      links: [
+        "https://ragnaroktoken.com",
+        "https://ragnarok-audit-platform.onrender.com",
+      ],
+    },
+    {
+      title: "More....",
+      description:
+        "The are a number of other projects, including personal practice projects and group work from my bootcamp days.",
+      image: UnderConstruction,
+    },
   ];
 
   return (
@@ -77,14 +97,76 @@ export default function Projects() {
             justifyContent: "space-between",
           }}
         >
-          <img src={projects[projectIndex].image} height={50} width={50}></img>
-          <p style={{ fontWeight: 600, fontSize: 24 }}>
-            {projects[projectIndex].title}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              width: "80%",
+            }}
+          >
+            <div
+              style={{
+                height: 120,
+                width: 120,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                borderRadius: 12,
+                backgroundColor: "rgba(50, 50, 60, 0.2)",
+                overflow: "hidden",
+              }}
+            >
+              <img src={projects[projectIndex].image} height="140%"></img>
+            </div>
+            <div
+              style={{
+                flexGrow: 1,
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <p
+                style={{
+                  fontWeight: 700,
+                  fontSize: 48,
+                  lineHeight: 0.1,
+                  color: "#444455",
+                }}
+              >
+                {projects[projectIndex].title}
+              </p>
+            </div>
+          </div>
+          <p
+            style={{
+              fontWeight: 600,
+              fontSize: 18,
+              textAlign: "center",
+              color: "#444455",
+            }}
+          >
+            {projects[projectIndex].description}
           </p>
-          <br />
-          {projects[projectIndex].description}
-          <br />
-          <div style={{ display: "flex" }}>
+          <div style={{ textAlign: "center" }}>
+            {projects[projectIndex].links?.map((l, idx) => (
+              <>
+                <a
+                  href={l}
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  {l}
+                </a>
+                {idx < projects[projectIndex].links.length && <br />}
+              </>
+            ))}
+          </div>
+          <div style={{ display: "flex", height: 30 }}>
             {projects.map((p, idx) => {
               return (
                 <div
