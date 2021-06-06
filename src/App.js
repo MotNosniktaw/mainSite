@@ -51,7 +51,7 @@ function App() {
             zIndex: 1,
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
           }}
         >
@@ -60,7 +60,7 @@ function App() {
               width: "80%",
               minWidth: 880,
               maxWidth: 1100,
-              height: "100%",
+              flex: 1,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
