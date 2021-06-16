@@ -34,7 +34,7 @@ function App() {
     >
       <div
         style={{
-          backgroundColor: constants.palette.light,
+          // backgroundColor: constants.palette.light,
           width: "100%",
           height: "100%",
           display: "flex",
