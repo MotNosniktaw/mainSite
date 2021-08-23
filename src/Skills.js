@@ -10,7 +10,7 @@ export default function Skills() {
     <div
       style={{
         height: "100%",
-        width: "100%",
+        width: "350px",
         padding: 12,
         display: "flex",
         flexDirection: "column",
