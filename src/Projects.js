@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import constants from "./constants";
 import GvantaLogo from "./assets/gvanta-logo.png";
-import RagnarokLogo from "./assets/ragnarok-logo.png";
 import RoqqettLogo from "./assets/roqqett-logo.jpg";
 import UnderConstruction from "./assets/under-construction.png";
 import RightArrow from "./assets/right-arrow.svg";
+import ZippeLogo from "./assets/zippe-logo.png";
 
 export default function Projects() {
   const [projectIndex, setProjectIndex] = useState(0);
   const projects = [
+    {
+      title: "Zippe",
+      description:
+        "Mobile and Web application offering a ride share service that gives back to the community.",
+      image: ZippeLogo,
+      links: ["https://www.facebook.com/zippeuk/"],
+    },
     {
       title: "Roqqett",
       description:
@@ -22,16 +29,6 @@ export default function Projects() {
         "Grandeo is a file storage and sharing platform implementing the power of the blockchain to maintain data integrity.",
       image: GvantaLogo,
       links: ["https://grandeo.net"],
-    },
-    {
-      title: "Ragnarok",
-      description:
-        "A very young personal project aiming to build an audit and launchpad platform to ensure safety when trading altcoins on the cryptocurrency market.",
-      image: RagnarokLogo,
-      links: [
-        "https://ragnaroktoken.com",
-        "https://ragnarok-audit-platform.onrender.com",
-      ],
     },
     {
       title: "More....",
@@ -118,7 +115,10 @@ export default function Projects() {
                 overflow: "hidden",
               }}
             >
-              <img src={projects[projectIndex].image} height="140%"></img>
+              <img
+                src={projects[projectIndex].image}
+                style={{ width: "100%", height: "100%" }}
+              ></img>
             </div>
             <div
               style={{
