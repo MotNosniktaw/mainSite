@@ -52,10 +52,9 @@ function Image({ src }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // border: "1px solid red",
       }}
     >
-      <img src={src} height="75%" />
+      <img src={src} height="75%" alt="icon for technology" />
     </div>
   );
 }

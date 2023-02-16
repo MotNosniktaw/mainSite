@@ -39,6 +39,7 @@ export default function Links() {
               top: "10px",
               position: "relative",
             }}
+            alt="rocket league logo"
           />
         </div>
       </Widget>
@@ -64,6 +65,7 @@ export default function Links() {
               transform: "rotate(10deg)",
               height: "105%",
             }}
+            alt="dota logo"
           />
         </div>
       </Widget>
@@ -96,6 +98,7 @@ export default function Links() {
                 transform: "rotate(-5deg)",
                 height: "100%",
               }}
+              alt="github logo"
             />
           </div>
         </Widget>
@@ -122,6 +125,7 @@ export default function Links() {
                 transform: "rotate(15deg)",
                 height: "100%",
               }}
+              alt="gmail logo"
             />
           </div>
         </Widget>
@@ -150,6 +154,7 @@ export default function Links() {
                 transform: "rotate(5deg)",
                 height: "100%",
               }}
+              alt="linkedin logo"
             />
           </div>
         </Widget>
@@ -176,6 +181,7 @@ export default function Links() {
                 transform: "rotate(-15deg)",
                 height: "100%",
               }}
+              alt="giovanni limmigrato logo"
             />
           </div>
         </Widget>

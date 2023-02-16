@@ -75,6 +75,7 @@ export default function Projects() {
             style={{ transform: "rotate(180deg)" }}
             src={RightArrow}
             height={50}
+            alt="left arrow"
           />
         </div>
       </Segment>
@@ -118,6 +119,7 @@ export default function Projects() {
               <img
                 src={projects[projectIndex].image}
                 style={{ width: "100%", height: "100%" }}
+                alt="project logo"
               ></img>
             </div>
             <div
@@ -207,7 +209,7 @@ export default function Projects() {
           }}
           className={["widget-base clickable"]}
         >
-          <img src={RightArrow} height={50} />
+          <img src={RightArrow} height={50} alt="right arrow" />
         </div>
       </Segment>
     </div>
