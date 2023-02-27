@@ -7,6 +7,7 @@ import particlesConfig from "./assets/particles.json";
 import Personal from "./Personal";
 import Skills from "./Skills";
 import Links from "./Links";
+import { Feed } from "./Feed";
 
 function App() {
   return (
@@ -14,14 +15,13 @@ function App() {
       style={{
         width: "100vw",
         height: "100vh",
+        padding: 64,
       }}
     >
       <div
         style={{
-          width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
@@ -30,7 +30,6 @@ function App() {
         <div
           style={{
             height: "100%",
-            width: "100%",
             zIndex: 1,
             display: "flex",
             flexDirection: "column",
@@ -40,9 +39,8 @@ function App() {
         >
           <div
             style={{
-              width: "80%",
               minWidth: 880,
-              maxWidth: 1100,
+              maxWidth: 900,
               flex: 1,
               display: "flex",
               flexDirection: "column",
@@ -67,6 +65,7 @@ function App() {
             </Row>
           </div>
         </div>
+        <Feed />
         <div
           style={{
             position: "absolute",

@@ -1,12 +1,29 @@
 import React, { useMemo } from "react";
 import constants from "./constants";
 
-export default function Widget({ children, height, width, double, onClick }) {
-  const backgroundColor = useMemo(() => pickRandomMediumColor(), []);
+export default function Widget({
+  children,
+  height,
+  width,
+  double,
+  onClick,
+  color,
+}) {
+  const backgroundColor = useMemo(() => {
+    switch (color) {
+      case "grey":
+        return constants.palette.medium1;
+      case "blue":
+        return constants.palette.medium2;
+      case "green":
+        return constants.palette.medium3;
+      default:
+        return pickRandomMediumColor();
+    }
+  }, [color]);
   function calculateDimension(value) {
     const tileSize = 100;
-    const scale =
-      Number.isInteger(value) && value > 0 ? (value > 4 ? 4 : value) : 1;
+    const scale = value > 0 ? (value > 12 ? 12 : value) : 1;
     return scale * tileSize - (double ? 16 : 0);
   }
 
