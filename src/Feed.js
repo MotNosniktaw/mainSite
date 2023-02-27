@@ -7,7 +7,7 @@ import useGetRSSFeed from "./getRSSFeed";
 import Widget from "./Widget";
 
 export function Feed() {
-  const { feed, isLoading, isError, error } = useGetRSSFeed();
+  const { feed, isLoading, isError } = useGetRSSFeed();
 
   const renderContent = () => {
     if (isLoading) {
